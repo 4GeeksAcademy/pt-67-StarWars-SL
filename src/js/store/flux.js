@@ -8,10 +8,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			getCharacters : async() => {
 				const res = await fetch(`https://www.swapi.tech/api/people/`)
 				const data = await res.json()
-				setStore({characters: data.resuts})
+				setStore({characters: data.results})
+				
+				console.log(data.results)
 			}
 		}
-		
+
 	};
 };
 

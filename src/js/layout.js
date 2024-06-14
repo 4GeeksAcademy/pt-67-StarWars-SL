@@ -10,8 +10,8 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { VehicleDetails } from "./views/vehiclesDetails";
-import { CharactersDetails } from "./views/vehiclesDetails";
-import { PlanetDetails } from "./views/vehiclesDetails";
+import { CharactersDetails } from "./views/charactersDetails";
+import { PlanetDetails } from "./views/planetsDetails";
 
 
 //create your first component
