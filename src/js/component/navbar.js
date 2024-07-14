@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<nav className="navbar-light rounded-5 rounded-top border border-warning-subtle">
+		<nav className="navbar-light rounded-5 rounded-top border border-warning-subtle bg-black">
 			<div className="navbar">
 
 				<div className="Wars">
@@ -17,7 +17,7 @@ export const Navbar = () => {
 
 
 					<div className="dropdown">
-						<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a className="boton-fav btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorite characters ({store.charactersfavorite.length})
 						</a>
 						<ul className="dropdown-menu bg-warning">
@@ -46,7 +46,7 @@ export const Navbar = () => {
 
 
 					<div className="dropdown">
-						<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a className="boton-fav btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorite vehicles ({store.vehiclesfavorite.length})
 						</a>
 						<ul className="dropdown-menu bg-warning">
@@ -75,7 +75,7 @@ export const Navbar = () => {
 
 
 					<div className="dropdown">
-						<a className="btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a className="boton-fav btn btn-warning dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Favorite planets ({store.planetsfavorite.length})
 						</a>
 						<ul className="dropdown-menu bg-warning">

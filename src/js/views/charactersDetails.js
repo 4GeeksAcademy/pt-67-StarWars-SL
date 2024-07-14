@@ -27,7 +27,6 @@ export const CharactersInfo = props => {
 
                             <div className="d-flex">
                                 <ul>
-
                                     <li className="p-3" ><h6>"Birth_year"
                                        <span> : {store?.charactersdetails?.birth_year}</span></h6>
                                     </li>

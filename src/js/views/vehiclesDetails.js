@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const vehiclesDetails = props => {
+export const VehiclesDetails = props => {
 
 	const { store, actions } = useContext(Context);
 	const params = useParams();
@@ -32,68 +32,68 @@ export const vehiclesDetails = props => {
 								<ul>
 
 									<li className="p-3" ><h6>"Cargo_capacity":
-										{store?.vehiclesfavorite?.cargo_capacity}</h6>
+										{store?.vehiclesdetails?.cargo_capacity}</h6>
 									</li>
 
 									<li className="p-3"><h6>  "consumables":
-										{store?.vehiclesfavorite?.consumables}</h6>
+										{store?.vehiclesdetails?.consumables}</h6>
 									</li>
 
 									<li className="p-3"><h6> "cost_in_credits":
-										{store?.ivehiclesfavorite?.cost_in_credits}</h6>
+										{store?.ivehiclesdetails?.cost_in_credits}</h6>
 									</li>
 
 									<li className="p-3"><h6> "created":
-										{store?.vehiclesfavorite?.created}</h6>
+										{store?.vehiclesdetails?.created}</h6>
 									</li>
 
 									<li className="p-3"><h6>   "crew":
-										{store?.vehiclesfavorite?.crew}</h6>
+										{store?.vehiclesdetails?.crew}</h6>
 									</li>
 
 									<li className="p-3"><h6>"edited":
-										{store?.vehiclesfavorite?.edited}</h6>
+										{store?.vehiclesdetails?.edited}</h6>
 									</li>
 
 									<li className="p-3"><h6>   "length":
-										{store?.vehiclesfavorite?.length}</h6>
+										{store?.vehiclesdetails?.length}</h6>
 									</li>
 
 									<li className="p-2"><h6>    "manufacturer":
-										{store?.vehiclesfavorite?.manufacturer}</h6>
+										{store?.vehiclesdetails?.manufacturer}</h6>
 									</li>
 								</ul>
 								<ul>
 									<li className="p-3"><h6>  "max_atmosphering_speed":
-										{store?.vehiclesfavorite?.max_atmosphering_speed}</h6>
+										{store?.vehiclesdetails?.max_atmosphering_speed}</h6>
 									</li>
 
 									<li className="p-3"><h6>   "model":
-										{store?.vehiclesfavorite?.model}</h6>
+										{store?.vehiclesdetails?.model}</h6>
 									</li>
 
 									<li className="p-3"><h6>  "name":
-										{store?.vehiclesfavorite?.name}</h6>
+										{store?.vehiclesdetails?.name}</h6>
 									</li>
 
 									<li className="p-3"><h6>  "passengers":
-										{store?.vehiclesfavorite?.passengers}</h6>
+										{store?.vehiclesdetails?.passengers}</h6>
 									</li>
 
 									<li className="p-3"><h6> "pilots":
-										{store?.vehiclesfavorite?.pilots}</h6>
+										{store?.vehiclesdetails?.pilots}</h6>
 									</li>
 
 									<li className="p-3"><h6> "films":
-										{store?.vehiclesfavorite?.films}</h6>
+										{store?.vehiclesdetails?.films}</h6>
 									</li>
 
 									<li className="p-3"><h6>  "url":
-										{store?.vehiclesfavorite?.url}</h6>
+										{store?.vehiclesdetails?.url}</h6>
 									</li>
 
 									<li className="p-3"><h6>  "vehicle_class":
-										{store?.vehiclesfavorite?.vehicle_class}</h6>
+										{store?.vehiclesdetails?.vehicle_class}</h6>
 									</li>
 
 

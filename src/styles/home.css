@@ -3,3 +3,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+h2{
+    color:#FFFF00;
+}
+.boton-fav{
+    background-color: #FFFF00;
+}

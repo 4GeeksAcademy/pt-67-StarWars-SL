@@ -47,7 +47,7 @@ export const Home = () => {
                                         <Link to={`/charactersDetails/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavoritsCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl"></i></button>
+                                        <button onClick={() => actions.addFavoriteCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl"></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -101,7 +101,7 @@ export const Home = () => {
                                         <Link to={`/vehiclesDetails/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavoritsVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
+                                        <button onClick={() => actions.addFavoriteVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
                                     </div>
                                 </div>
                             ))}
@@ -155,7 +155,7 @@ export const Home = () => {
                                         <Link to={`/planetsDetails/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
-                                        <button onClick={() => actions.addFavoritsPlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
+                                        <button onClick={() => actions.addFavoritePlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
                                     </div>
                                 </div>
                             ))}

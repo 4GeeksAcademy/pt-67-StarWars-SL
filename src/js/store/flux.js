@@ -49,8 +49,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					phothocharacters: data
 				})
-
-
 			},
 
 			getVehiclesDetails: async (uid) => {
@@ -58,7 +56,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const data = await res.json()
 				console.log(data)
 				setStore({
-					infovehicles: data.result.properties
+					vehiclesdetails: data.result.properties
 				})
 				console.log(data.result.properties)
 			},
@@ -68,25 +66,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const data = await res.json()
 				console.log(data)
 				setStore({
-					infoplanets: data.result.properties
+					planetsdetails: data.result.properties
 				})
 			},
 
-			addFavoritsCharacters: async (id, name) => {
+			addFavoriteCharacters: async (id, name) => {
 				const { charactersfavorite } = getStore()
 				setStore({ charactersfavorite: [...charactersfavorite, { id, name }] })
 			},
 
 
-			addFavoritsPlanets: async (id, name) => {
+			addFavoritePlanets: async (id, name) => {
 				const { planetsfavorite } = getStore()
 				setStore({planetsfavorite: [...planetsfavorite, { id, name }] })
 			},
 
 
-
-
-			addFavoritsVehicles: async (id, name) => {
+			addFavoriteVehicles: async (id, name) => {
 				const { vehiclesfavorite } = getStore()
 				setStore({ vehiclesfavorite: [...vehiclesfavorite, { id, name }] })
 			},
@@ -99,14 +95,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 
-
 			deleteVehicles: (name) => {
 				let store = getStore()
 				const result = store.vehiclesfavorite.filter((favorito) => (favorito != name));
 				setStore({ vehiclesfavorite: result })
 			},
-
-
 
 
 

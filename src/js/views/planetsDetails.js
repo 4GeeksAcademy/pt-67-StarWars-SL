@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const planetsDetails = props => {
+export const PlanetsDetails = props => {
 
     const { store, actions } = useContext(Context);
     const params = useParams();
@@ -32,60 +32,60 @@ export const planetsDetails = props => {
                                 <ul>
 
                                     <li className="p-3" ><h6> "climate":
-                                        {store?.planetsfavorite?.climate}</h6>
+                                        {store?.planetsdetails?.climate}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"created":
-                                        {store?.planetsfavorite?.created}</h6>
+                                        {store?.planetsdetails?.created}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "diameter":
-                                        {store?.planetsfavorite?.diameter}</h6>
+                                        {store?.planetsdetails?.diameter}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>   "edited":
-                                        {store?.planetsfavorite?.edited}</h6>
+                                        {store?.planetsdetails?.edited}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>   "films":
-                                        {store?.planetsfavorite?.films}</h6>
+                                        {store?.planetsdetails?.films}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"gravity":
-                                        {store?.planetsfavorite?.gravity}</h6>
+                                        {store?.planetsdetails?.gravity}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "name":
-                                        {store?.planetsfavorite?.name}</h6>
+                                        {store?.planetsdetails?.name}</h6>
                                     </li>
 
                                     <li className="p-2"><h6>   "orbital_period":
-                                        {store?.planetsfavorite?.orbital_period}</h6>
+                                        {store?.planetsdetails?.orbital_period}</h6>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li className="p-3"><h6>    "population":
-                                        {store?.planetsfavorite?.population}</h6>
+                                        {store?.planetsdetails?.population}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "residents":
-                                        {store?.planetsfavorite?.residents}</h6>
+                                        {store?.planetsdetails?.residents}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "rotation_period":
-                                        {store?.planetsfavorite?.rotation_period}</h6>
+                                        {store?.planetsdetails?.rotation_period}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "surface_water":
-                                        {store?.planetsfavorite?.surface_water}</h6>
+                                        {store?.planetsdetails?.surface_water}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "terrain":
-                                        {store?.planetsfavorite?.terrain}</h6>
+                                        {store?.planetsdetails?.terrain}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "url":
-                                        {store?.planetsfavorite?.url}</h6>
+                                        {store?.planetsdetails?.url}</h6>
                                     </li>
 
                                 </ul>
