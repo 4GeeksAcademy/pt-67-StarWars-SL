@@ -32,12 +32,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ planets: data.results })
 			},
 
-			getCharactersInfo: async (uid) => {
+			getCharactersDetails: async (uid) => {
 				const res = await fetch(`https://www.swapi.tech/api/people/${uid}`)
 				const data = await res.json()
 				console.log(data)
 				setStore({
-					characterdetails: data.result.properties
+					charactersdetails: data.result.properties
 				})
 			},
 

@@ -24,7 +24,7 @@ export const Navbar = () => {
 							{store.charactersfavorite.map((item, index) => {
 								return (
 									<li className="container-name" key={index}>
-										<Link to={`/charactersdetails/${item.id}`} className="dropdown-item bg-warning fw-bold ">{item.name}</Link>
+										<Link to={`/charactersDetails/${item.id}`} className="dropdown-item bg-warning fw-bold ">{item.name}</Link>
 										<button className="delete" onClick={() => actions.deleteCharacters(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
@@ -36,7 +36,7 @@ export const Navbar = () => {
 							{store.vehiclesfavorite.map((item, index) => {
 								return (
 									<li key={index}>
-										<Link to={`/charactersdetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
+										<Link to={`/charactersDetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
 										<button className="delete" onClick={() => actions.deleteCharacters(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
@@ -53,7 +53,7 @@ export const Navbar = () => {
 							{store.vehiclesfavorite.map((item, index) => {
 								return (
 									<li className="container-name" key={index}>
-										<Link to={`/vehiclesdetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
+										<Link to={`/vehiclesDetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
 										<button className="delete" onClick={() => actions.deleteVehicles(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
@@ -65,7 +65,7 @@ export const Navbar = () => {
 							{store.vehiclesfavorite.map((item, index) => {
 								return (
 									<li key={index}>
-										<Link to={`/vehiclesdetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
+										<Link to={`/vehiclesDetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
 										<button className="delete" onClick={() => actions.deleteVehicles(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
@@ -82,7 +82,7 @@ export const Navbar = () => {
 							{store.planetsfavorite.map((item, index) => {
 								return (
 									<li className="container-name" key={index}>
-										<Link to={`/planetsdetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
+										<Link to={`/planetsDetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
 										<button className="delete" onClick={() => actions.deletePlanets(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)
@@ -94,7 +94,7 @@ export const Navbar = () => {
 							{store.planetsfavorite.map((item, index) => {
 								return (
 									<li key={index}>
-										<Link to={`/planetsdetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
+										<Link to={`/planetsDetails/${item.id}`} className="dropdown-item bg-warning fw-bold">{item.name}</Link>
 										<button className="delete" onClick={() => actions.deletePlanets(item)}><i className="fa-solid fa-trash-can fa-2xl" ></i></button>
 									</li>
 								)

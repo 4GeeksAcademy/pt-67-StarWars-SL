@@ -29,7 +29,7 @@ const Layout = () => {
 						<Route path="/vehiclesDetails/:uid" element={<VehicleDetails />} />
 						<Route path="/characthersDetails/:uid" element={<CharacterDetails />} />
 						<Route path="/planetsDetails/:uid" element={<PlanetDetails />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route path="*" element={<h1 className="text-light">Not found!</h1>} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>
