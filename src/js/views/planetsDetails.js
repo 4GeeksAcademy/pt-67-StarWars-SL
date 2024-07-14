@@ -9,7 +9,7 @@ export const PlanetDetails = props => {
 
     useEffect(() => {
 
-        actions.planetsDetails(params.uid)
+        actions.getPlanetsDetails(params.uid)
 
     }, [])
 
