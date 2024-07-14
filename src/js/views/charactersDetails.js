@@ -1,5 +1,5 @@
-import React, { useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const CharactersInfo = props => {
@@ -8,12 +8,13 @@ export const CharactersInfo = props => {
     const params = useParams();
 
     useEffect(() => {
-        actions.getCharactersInfo(params.uid)
+        actions.getCharactersDetails(params.uid)
     }, [])
 
     return (
 
         <div className="jumbotron mx-5 my-5">
+
 
             <div className="card mb-3 border border-1  rounded-start  border border-warning-subtle" style={{ width: "1260px", height: "555px", background: "black", color: "#FFEB1F" }}>
 
@@ -32,64 +33,64 @@ export const CharactersInfo = props => {
                                     </li>
 
                                     <li className="p-3"><h6>"Eye_color":
-                                        {store?.characterdetails?.eye_color}</h6>
+                                        {store?.charactersdetails?.eye_color}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Films":
-                                        {store?.characterdetails?.films}</h6>
+                                        {store?.charactersdetails?.films}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Gender":
-                                        {store?.characterdetails?.gender}</h6>
+                                        {store?.charactersdetails?.gender}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Hair_color":
-                                        {store?.characterdetails?.hair_color}</h6>
+                                        {store?.charactersdetails?.hair_color}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Height":
-                                        {store?.characterdetails?.height}</h6>
+                                        {store?.charactersdetails?.height}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Homeworld":
-                                        {store?.characterdetails?.homeworld}</h6>
+                                        {store?.charactersdetails?.homeworld}</h6>
                                     </li>
 
                                     <li className="p-2"><h6> "Mass":
-                                        {store?.characterdetails?.mass}</h6>
+                                        {store?.charactersdetails?.mass}</h6>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li className="p-3"><h6> "Name":
-                                        {store?.characterdetails?.name}</h6>
+                                        {store?.charactersdetails?.name}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "Skin_color":
-                                        {store?.characterdetails?.skin_color}</h6>
+                                        {store?.charactersdetails?.skin_color}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Created":
-                                        {store?.characterdetails?.created}</h6>
+                                        {store?.charactersdetails?.created}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>  "Edited":
-                                        {store?.characterdetails?.edited}</h6>
+                                        {store?.charactersdetails?.edited}</h6>
                                     </li>
 
                                     <li className="p-3"><h6> "Species":
-                                        {store?.characterdetails?.species}</h6>
+                                        {store?.charactersdetails?.species}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Starships":
-                                        {store?.characterdetails?.starships}</h6>
+                                        {store?.charactersdetails?.starships}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Url"
-                                        {store?.characterdetails?.url}</h6>
+                                        {store?.charactersdetails?.url}</h6>
                                     </li>
 
                                     <li className="p-3"><h6>"Vehicles":
-                                        {store?.characterdetails?.vehicles}</h6>
+                                        {store?.charactersdetails?.vehicles}</h6>
                                     </li>
 
 
@@ -98,7 +99,15 @@ export const CharactersInfo = props => {
                         </div>
                     </div>
                 </div>
-			</div>
-		</div>
-	)
-}
+            </div>
+
+            <Link to="/">
+                <span className="btn btn-warning btn-lg" href="#" role="button">
+                    Back home
+                </span>
+            </Link>
+        </div>
+
+
+    );
+};

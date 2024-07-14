@@ -44,7 +44,7 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/charactersInfo/${item.uid}`} className="btn-info">
+                                        <Link to={`/charactersDetails/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                         <button onClick={() => actions.addFavoritsCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl"></i></button>
@@ -98,7 +98,7 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/vehiclesInfo/${item.uid}`} className="btn-info">
+                                        <Link to={`/vehiclesDetails/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                         <button onClick={() => actions.addFavoritsVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
@@ -152,7 +152,7 @@ export const Home = () => {
                                         alt={""}
                                     />
                                     <div className="carousel-caption d-none d-md-block">
-                                        <Link to={`/planetsInfo/${item.uid}`} className="btn-info">
+                                        <Link to={`/planetsDetails/${item.uid}`} className="btn-info">
                                             {item.name}
                                         </Link>
                                         <button onClick={() => actions.addFavoritsPlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>

@@ -2,14 +2,14 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const PlanetsInfo = props => {
+export const planetsDetails = props => {
 
     const { store, actions } = useContext(Context);
     const params = useParams();
 
     useEffect(() => {
 
-        actions.getPlanetsInfo(params.uid)
+        actions.planetsDetails(params.uid)
 
     }, [])
 
