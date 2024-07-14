@@ -11,34 +11,177 @@ export const Home = () => {
 
 	useEffect(()=> {
 		 actions.getCharacters()
+		 actions.getVehicles();
+         actions.getPlanets();
 	}, [])
 
 
 	return(
-		<div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-			<div className="carousel-inner d-flex justify-content-center w-100">
-				{store.characters.map((item, index ) => {
-					return (
-							<div className={`card carousel-item ${index ===0 && "active"}`} data-bs-interval="2000" style={{width: "18rem"}}>
-								<img src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} className="card-img-top" alt="..."/>
-								<div className="card-body">
-									<h5 className="card-title">{item.name}</h5>
-									<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<Link to={`/characthers/${item.uid}`} className="btn btn-primary">Go somewhere</Link>
-								</div>
-							</div>
-					)
-				})}
-			</div>
-			<button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-				<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span className="visually-hidden">Previous</span>
-			</button>
-			<button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-				<span className="carousel-control-next-icon" aria-hidden="true"></span>
-				<span className="visually-hidden">Next</span>
-			</button>
-		</div>
+		<div className="text-center">
 
+            <div className="d-flex">
+                <div className="characters">
+                    <h2>Characters</h2>
+                    <div id="carouselCharacters" className="carousel slide rounded-start">
+                        <div className="carousel-indicators">
+                            {store.characters.map((item, index) => (
+                                <button
+                                    key={index}
+                                    type="button"
+                                    data-bs-target="#carouselCharacters"
+                                    data-bs-slide-to={index}
+                                    className={index === 0 ? "active" : ""}
+                                    aria-label={`Slide ${index + 1}`}
+                                ></button>
+                            ))}
+                        </div>
+                        <div className="carousel-inner">
+                            {store.characters.map((item, index) => (
+                                <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                                    <img
+                                        src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
+                                        className="d-block w-100"
+                                        alt={""}
+                                    />
+                                    <div className="carousel-caption d-none d-md-block">
+                                        <Link to={`/charactersInfo/${item.uid}`} className="btn-info">
+                                            {item.name}
+                                        </Link>
+                                        <button onClick={() => actions.addFavoritsCharacters(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl"></i></button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <button
+                            className="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselCharacters"
+                            data-bs-slide="prev"
+                        >
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            className="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselCharacters"
+                            data-bs-slide="next"
+                        >
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div className="vehicles">
+                    <h2>Vehicles</h2>
+                    <div id="carouselVehicles" className="carousel slide rounded-start">
+                        <div className="carousel-indicators 2">
+                            {store.vehicles.map((item, index) => (
+                                <button
+                                    key={index}
+                                    type="button"
+                                    data-bs-target="#carouselVehicles"
+                                    data-bs-slide-to={index}
+                                    className={index === 0 ? "active" : ""}
+                                    aria-label={`Slide ${index + 1}`}
+                                ></button>
+                            ))}
+                        </div>
+                        <div className="carousel-inner">
+                            {store.vehicles.map((item, index) => (
+                                <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                                    <img
+                                        src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`}
+                                        className="d-block w-100"
+                                        alt={""}
+                                    />
+                                    <div className="carousel-caption d-none d-md-block">
+                                        <Link to={`/vehiclesInfo/${item.uid}`} className="btn-info">
+                                            {item.name}
+                                        </Link>
+                                        <button onClick={() => actions.addFavoritsVehicles(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <button
+                            className="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselVehicles"
+                            data-bs-slide="prev"
+                        >
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            className="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselVehicles"
+                            data-bs-slide="next"
+                        >
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div className="planets">
+                    <h2>Planets</h2>
+                    <div id="carouselPlanets" className="carousel slide rounded-start">
+                        <div className="carousel-indicators 3">
+                            {store.planets.map((item, index) => (
+                                <button
+                                    key={index}
+                                    type="button"
+                                    data-bs-target="#carouselPlanets"
+                                    data-bs-slide-to={index}
+                                    className={index === 0 ? "active" : ""}
+                                    aria-label={`Slide ${index + 1}`}
+                                ></button>
+                            ))}
+                        </div>
+                        <div className="carousel-inner">
+                            {store.planets.map((item, index) => (
+                                <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                                    <img
+                                        src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`}
+                                        className="d-block w-100"
+                                        alt={""}
+                                    />
+                                    <div className="carousel-caption d-none d-md-block">
+                                        <Link to={`/planetsInfo/${item.uid}`} className="btn-info">
+                                            {item.name}
+                                        </Link>
+                                        <button onClick={() => actions.addFavoritsPlanets(item.uid, item.name)} className="like"><i class="fa-solid fa-heart fa-2xl" ></i></button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <button
+                            className="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselPlanets"
+                            data-bs-slide="prev"
+                        >
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            className="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselPlanets"
+                            data-bs-slide="next"
+                        >
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 )};
 
